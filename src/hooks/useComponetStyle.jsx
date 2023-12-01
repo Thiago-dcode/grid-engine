@@ -7,7 +7,7 @@ export default function useComponetStyle(page) {
     const [componentStyle, setComponentStyle] = useState();
 
     const handleComponentSize = useCallback(() => {
-        if ( pageSize.width > page.l.size) {
+        if (pageSize.width < page.xl.size && pageSize.width > page.l.size) {
             console.log(pageSize.width)
             return pageSize.width / page.xl.columns;
         } else if (pageSize.width < page.l.size && pageSize.width > page.m.size) {
@@ -23,7 +23,10 @@ export default function useComponetStyle(page) {
 
             return pageSize.width / page.xs.columns;
         }
-     
+        else{
+
+            return page.max.componentSize;
+        }
     }, [pageSize, page]);
     useEffect(() => {
         const size = handleComponentSize();

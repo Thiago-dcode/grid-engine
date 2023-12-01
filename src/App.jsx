@@ -1,6 +1,12 @@
 import useComponetStyle from "./hooks/useComponetStyle";
 import './app.css'
 const page = {
+  max: {
+
+    size: 1400,
+    columns: 9,
+    componentSize: 1400 / 9,
+  },
   xl: {
 
     size: 1200,
@@ -49,7 +55,9 @@ function App() {
 
   return (
     <main className="w-full flex items-center justify-center">
-      <div id='page-grid'>
+      <div style={{
+      
+      }} id='page-grid'>
         {arrayFrom(48).map((num, i) => {
 
           return <div style={componentStyle} className='border border-black component' key={`${i}`}>{`component ${num + 1}`}</div>
