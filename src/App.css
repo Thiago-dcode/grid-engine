@@ -1,19 +1,14 @@
-
-
 #page-grid {
   display: grid;
   width: 100vw;
   max-width: 1400px;
   grid-template-columns: repeat(9, 1fr);
-
-
-
+  grid-auto-rows:1fr;
 }
 
 /* XL */
 @media screen and (max-width: 1200px) {
   #page-grid {
-    
     grid-template-columns: repeat(7, 1fr);
   }
 }
@@ -23,7 +18,6 @@
   #page-grid {
     grid-template-columns: repeat(7, 1fr);
   }
-
 }
 
 /* M */

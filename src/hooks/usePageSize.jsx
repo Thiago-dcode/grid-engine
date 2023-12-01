@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const usePageSize = () => {
+export const usePageSize = () => {
     const [pageSize, setPageSize] = useState(getPageSize());
 
     function getPageSize() {
